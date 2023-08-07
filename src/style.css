@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100svh;
+}
+
+#content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.header {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, .9);
+  color: white;
+  font-family: system-ui;
+  gap: 1rem;
+}
+
+.header ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+main {
+  background-image: url('./restaurant_background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  flex: 1;
+
+}
+
+.page-content {
+  background-color: rgba(0, 0, 0, .45);
+  min-height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: 'satisfy', system-ui, sans-serif;
+}
+
+.page-content h1 {
+  padding: 1rem;
+  font-size: 3rem;
+}
+
+.page-content p {
+  padding: .25rem;
+  font-family: system-ui;
+  font-size: .75rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  :hover {
+    color: rgb(255, 255, 126);
+  }
+}
