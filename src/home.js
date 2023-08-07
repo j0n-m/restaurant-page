@@ -1,5 +1,6 @@
 const home = (() => {
-  function createHome() {
+  const name = 'Home';
+  function create() {
     const main = document.createElement('main');
     const pageContent = document.createElement('div');
     const restaurantTitle = document.createElement('h1');
@@ -8,7 +9,8 @@ const home = (() => {
     pageContent.classList.add('page-content');
 
     restaurantTitle.textContent = "le Pavillon";
-    footer.textContent = "Jon Monarrez &copy; 2022";
+    footer.textContent = "Jon Monarrez © 2022";
+    footer.classList.add('footer');
 
     pageContent.appendChild(restaurantTitle);
     pageContent.appendChild(footer);
@@ -16,7 +18,10 @@ const home = (() => {
 
     return main;
   }
-  return { createHome };
+  function getName() {
+    return name;
+  }
+  return { create, getName };
 
 })();
 

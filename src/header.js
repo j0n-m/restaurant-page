@@ -1,37 +1,29 @@
 const header = (() => {
-
-  function createHeader() {
+  function create(headerNameList) {
     const main_header = document.createElement('div');
-    const headerItems = ['Home', 'Menu', 'About'];
-
-    // looping variables
-    // const ul = document.create('ul');
-    // const anchor = document.create('a');
-    // const li = document.create('li');
+    const ul = document.createElement('ul');
+    let countIndex = 0;
 
     main_header.classList.add('header');
-    // anchor.setAttribute("href", "#");
-    // li.textContent = headerItems[0];
-    //
 
-    headerItems.forEach(item => {
-      const ul = document.createElement('ul');
+    headerNameList.forEach(navName => {
       const anchor = document.createElement('a');
       const li = document.createElement('li');
 
       anchor.setAttribute("href", "#");
-      li.textContent = item;
-      li.classList.add(item.toLowerCase());
+      li.textContent = navName;
+      li.classList.add(navName.toLowerCase());
+      li.setAttribute('data-index', countIndex)
 
       anchor.appendChild(li);
       ul.appendChild(anchor);
       main_header.appendChild(ul);
+      countIndex++;
     })
     return main_header;
   }
 
-
-  return { createHeader };
+  return { create };
 })();
 
 export default header;

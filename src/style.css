@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'satisfy';
+  src: url('./Satisfy-Regular.ttf');
+}
+
 *,
 *::before,
 *::after {
@@ -25,13 +30,13 @@ body {
   background-color: rgba(0, 0, 0, .9);
   color: white;
   font-family: system-ui;
-  gap: 1rem;
 }
 
 .header ul {
   display: flex;
   list-style: none;
   justify-content: center;
+  gap: 1rem;
 }
 
 main {
@@ -46,7 +51,7 @@ main {
   background-color: rgba(0, 0, 0, .45);
   min-height: 100%;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-direction: column;
   align-items: center;
   color: white;
@@ -58,11 +63,19 @@ main {
   font-size: 3rem;
 }
 
-.page-content p {
+.page-content .footer {
   padding: .25rem;
   font-family: system-ui;
   font-size: .75rem;
+  margin-top: auto;
 }
+
+.page-content .hours {
+  font-family: system-ui;
+  background-color: rgba(0, 0, 0, .45);
+  padding: .5rem 1rem;
+}
+
 
 a {
   text-decoration: none;
